@@ -56,4 +56,8 @@
   .flex-center {
     @apply flex items-center justify-center;
   }
+
+  .action-btn {
+    @apply hover:opacity-50 transition-opacity duration-300
+  }
 }

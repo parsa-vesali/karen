@@ -65,15 +65,19 @@
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
         </symbol>
+        <symbol id="chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </symbol>
 
     </svg>
 
     <header>
-        <nav class="container">
+        <nav class="">
             <!-- TOP NAV -->
-            <div class="flex items-center justify-between py-8">
+            <div class="container flex items-center justify-between pt-8">
                 <!-- SEARCHBAR -->
-                <button class="flex items-center gap-x-1 border-b-2 border-b-zinc-300 pb-1.5">
+                <button class="flex items-center gap-x-1 border-b-2 border-b-zinc-300 dark:border-b-zinc-500 pb-1.5">
                     <label for="#search-box">
                         <svg class="size-6 text-zinc-400">
                             <use href="#search" />
@@ -89,7 +93,7 @@
                 <div class="flex items-center justify-center gap-x-4">
                     <!-- SHOPPING CART -->
                     <button class="relative flex justify-center group">
-                        <svg class="size-6">
+                        <svg class="size-6 action-btn">
                             <use href="#shopping-bag" />
                         </svg>
                         <!-- BADGE -->
@@ -97,22 +101,24 @@
                             class="absolute -top-1 -right-2 w-3.5 h-3.5 text-xs bg-red-600 text-white flex items-center justify-center rounded-full">0</span>
                         <!-- SHOPPING CART BOX -->
                         <div
-                            class="absolute w-[350px] h-auto p-4 flex bg-white dark:bg-zinc-800 rounded shadow top-20
-                        opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-10 duration-300">
+                            class="absolute w-[350px] p-4 flex bg-white dark:bg-zinc-800 rounded shadow top-20
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-12 duration-300 delay-75">
                             <!-- SHOPPING CART EMPTY -->
-                            <div class="w-full flex flex-col items-center justify-center">
-                                <svg class="size-18 text-zinc-300">
+                            <div class="w-full flex flex-col items-center justify-center space-y-2 py-3">
+                                <svg class="size-24 text-zinc-300 dark:text-zinc-300">
                                     <use href="#shopping-cart" />
                                 </svg>
-                                <h class="font-DanaMedium text-lg">هیچ محصولی در سبد خرید نیست.</h>
-                                <p class="text-zinc-400">شاید این صفحات برای شما جذاب باشند</p>
-                                <ul class="flex items-center gap-x-3 text-sky-500">
+                                <h class="font-DanaMedium text-lg pt-2 pb-3">هیچ محصولی در سبد خرید نیست! </h>
+                                <p class="text-zinc-400 text-sm">شاید این صفحات برای شما جذاب باشند :</p>
+                                <ul class="flex items-center gap-x-2 text-sky-400">
                                     <li>
                                         <a href="#">حراج استایل</a>
                                     </li>
+                                    <span>|</span>
                                     <li>
                                         <a href="#">فروشگاه</a>
                                     </li>
+                                    <span>|</span>
                                     <li>
                                         <a href="#">برند های برتر</a>
                                     </li>
@@ -122,13 +128,13 @@
                         </div>
                     </button>
                     <!-- Favorites  -->
-                    <button class="">
+                    <button class="action-btn">
                         <svg class="size-6">
                             <use href="#heart" />
                         </svg>
                     </button>
                     <!-- TOGGLE THEME -->
-                    <button class="action-btn toggle-theme">
+                    <button class="toggle-theme action-btn ">
                         <svg class="inline-block dark:hidden size-6">
                             <use href="#moon" />
                         </svg>
@@ -137,7 +143,7 @@
                         </svg>
                     </button>
                     <!-- LOGIN & ACCOUNT BTN -->
-                    <button class="flex items-center gap-x-0.5">
+                    <button class="flex items-center gap-x-0.5 action-btn">
                         <svg class="size-6">
                             <use href="#arrow-left-end" />
                         </svg>
@@ -147,6 +153,48 @@
                 </div>
             </div>
             <!-- MENU -->
+            <ul class="relative flex items-center justify-center gap-x-6 w-full mx-auto pt-12">
+                <li class="flex items-center justify-center gap-x-1 group">
+                    <a href="#">مـردانـه</a>
+                    <svg class="size-3">
+                        <use href="#chevron" />
+                    </svg>
+
+                    <!-- SUBMENU -->
+                    <ul
+                        class="absolute  inset-0 w-full top-44 h-96 p-6 flex justify-center bg-white dark:bg-zinc-800 rounded shadow border-t opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-24 duration-300 delay-75">
+                        <!-- محتوای ساب‌منو -->
+                    </ul>
+                </li>
+                <li class="flex items-center gap-x-1">
+                    <a href="#">زنـانـه</a>
+                    <svg class="size-3">
+                        <use href="#chevron" />
+                    </svg>
+                </li>
+                <li class="flex items-center gap-x-1">
+                    <a href="#">بـچه گـانـه</a>
+                    <svg class="size-3">
+                        <use href="#chevron" />
+                    </svg>
+                </li>
+                <li>
+                    <a href="#">اکـسسوری</a>
+                </li>
+                <span class="w-1 h-8 flex border-l-2 border-zinc-200"></span>
+                <li>
+                    <a href="#">حـراج اسـتایل</a>
+                </li>
+                <li>
+                    <a href="#">فــروشــگـاه</a>
+                </li>
+                <li>
+                    <a href="#">تـماس بـا مـا</a>
+                </li>
+                <li>
+                    <a href="#">دربـاره مـا</a>
+                </li>
+            </ul>
         </nav>
     </header>
 
