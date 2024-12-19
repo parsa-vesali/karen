@@ -73,11 +73,16 @@
             stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </symbol>
-
+        <symbol id="fire" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z" />
+          </symbol>
+          
     </svg>
 
-    <header>
-        <nav>
+    <header class="relative">
+        <!-- DESKTOP -->
+        <nav class="hidden z-40 lg:flex flex-col">
             <!-- TOP NAV -->
             <div class="container flex items-center justify-between pt-8">
                 <!-- SEARCHBAR -->
@@ -89,18 +94,59 @@
                                 <use href="#search" />
                             </svg>
                         </label>
-                        <input id="search-box" type="text" placeholder="جستجو برای محصولات...">
+                        <input type="text" placeholder="جستجو برای محصولات...">
                     </button>
                     <!-- SEARCH MODAL -->
                     <div class="search-modal">
-                        <div class="search-modal-header">
-                            <span class="search-modal-close cursor-pointer">
-                                <svg class="size-7">
-                                    <use href="#x-mark" />
+                        <div class="container mx-28">
+                            <!-- HEADER -->
+                            <div class="flex justify-end">
+                                <span class="search-modal-close w-fit cursor-pointer">
+                                    <svg class="size-8 text-zinc-500 dark:text-zinc-200">
+                                        <use href="#x-mark" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <!-- SEARCH BAR -->
+                            <button
+                                class="search-btn-open mt-5 flex items-center gap-x-2 border-b-2 border-b-zinc-300 dark:border-b-zinc-500 pb-1.5 w-full">
+                                <label for="#search-box">
+                                    <svg class="size-7 text-zinc-400">
+                                        <use href="#search" />
+                                    </svg>
+                                </label>
+                                <input type="text" class="text-lg w-full"
+                                    placeholder="نام محصول مورد نظر خود را وارد کنید ...">
+                            </button>
+                            <!-- TRENDING -->
+                            <span class="mt-8 flex items-center gap-x-1">
+                                <svg class="size-5">
+                                    <use href="#fire" />
                                 </svg>
+                                <p>بیشترین جستجو های اخیر :</p>
                             </span>
+                            <ul class="flex items-center gap-x-2 flex-wrap mt-5 child:search-modal-list-item">
+                                <li>
+                                    <a href="#">#پیراهن مردانه</a>
+                                </li>
+                                <li>
+                                    <a href="#">#شلوار مردانه</a>
+                                </li>
+                                <li>
+                                    <a href="#">#کت و شلوار</a>
+                                </li>
+                                <li>
+                                    <a href="#">#کفش مردانه</a>
+                                </li>
+                                <li>
+                                    <a href="#">#اکسسوری مردانه</a>
+                                </li>
+                                <li>
+                                    <a href="#">#لباس ورزشی</a>
+                                </li>
+                            </ul>
+
                         </div>
-                        <input id="search-box" type="text" placeholder="جستجو برای محصولات..." />
                     </div>
                 </div>
                 </button>
@@ -282,35 +328,199 @@
                     </div>
                 </li>
                 <li class="menu-item group">
-                    <a href="#">زنـانـه</a>
-                    <svg class="size-3 group-hover:rotate-180 transition-transform duration-300">
+                    <a href="#" class="menu-item-link">زنـانـه</a>
+                    <svg class="menu-item-icon">
                         <use href="#chevron" />
                     </svg>
+                    <!-- SUBMENU -->
+                    <div class="submenu">
+                        <ul class="submenu-list">
+                            <span
+                                class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
+                                <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">لــباس زنـانـه</p>
+                                <svg class="size-5">
+                                    <use href="#chevron" />
+                                </svg>
+                            </span>
+                            <li><a href="#">پیراهن</a></li>
+                            <li><a href="#">مانتو</a></li>
+                            <li><a href="#">شلوار</a></li>
+                            <li><a href="#">ست مجلسی</a></li>
+                            <li><a href="#">سویشرت</a></li>
+                            <li><a href="#">پالتو، بارانی، کاپشن</a></li>
+                            <li class="flex items-center gap-x-1">
+                                <a href="#">حراج استایل</a>
+                                <span
+                                    class="w-8 rounded flex-center bg-red-600 text-white p-0.5 text-[10px]">ویژه</span>
+                            </li>
+                            <li><a href="#">ژاکت و پلیور</a></li>
+                        </ul>
+                        <ul class="submenu-list">
+                            <span
+                                class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
+                                <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">کــفش زنــانه</p>
+                                <svg class="size-5">
+                                    <use href="#chevron" />
+                                </svg>
+                            </span>
+                            <li><a href="#">کفش پاشنه‌بلند</a></li>
+                            <li><a href="#">کفش ورزشی</a></li>
+                            <li><a href="#">کفش راحتی</a></li>
+                            <li><a href="#">صندل</a></li>
+                            <li><a href="#">بوت</a></li>
+                            <li><a href="#">کفش پیاده‌روی</a></li>
+                            <li><a href="#">کفش کوهنوردی</a></li>
+                            <li><a href="#">دمپایی</a></li>
+                        </ul>
+                        <ul class="submenu-list">
+                            <span
+                                class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
+                                <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">کــیف زنــانه</p>
+                                <svg class="size-5">
+                                    <use href="#chevron" />
+                                </svg>
+                            </span>
+                            <li><a href="#">کیف دستی</a></li>
+                            <li><a href="#">کیف دوشی</a></li>
+                            <li><a href="#">کیف پول</a></li>
+                            <li><a href="#">کیف لپ‌تاپ</a></li>
+                            <li><a href="#">کوله‌پشتی</a></li>
+                            <li><a href="#">کیف مجلسی</a></li>
+                            <li><a href="#">کیف اداری</a></li>
+                        </ul>
+                        <ul class="submenu-list">
+                            <span
+                                class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
+                                <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">اکــسـسوری زنــانه</p>
+                                <svg class="size-5">
+                                    <use href="#chevron" />
+                                </svg>
+                            </span>
+                            <li><a href="#">کمربند</a></li>
+                            <li><a href="#">ساعت مچی</a></li>
+                            <li class="flex items-center gap-x-1">
+                                <a href="#">عینک آفتابی</a>
+                                <span
+                                    class="w-8 rounded flex-center bg-green-600 text-white p-0.5 text-[10px]">جدید</span>
+                            </li>
+                            <li><a href="#">حـراج استایل</a></li>
+                            <li><a href="#">شال</a></li>
+                            <li><a href="#">دستکش</a></li>
+                            <li><a href="#">شال‌گردن</a></li>
+                            <li><a href="#">کلاه</a></li>
+                        </ul>
+                        <ul class="submenu-list">
+                            <span
+                                class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
+                                <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">لـباس ورزشـی زنــانه</p>
+                                <svg class="size-5">
+                                    <use href="#chevron" />
+                                </svg>
+                            </span>
+                            <li><a href="#">تی‌شرت ورزشی</a></li>
+                            <li><a href="#">شلوارک ورزشی</a></li>
+                            <li><a href="#">هودی و سویشرت ورزشی</a></li>
+                            <li><a href="#">لباس تیمی</a></li>
+                            <li><a href="#">لباس دوچرخه‌سواری</a></li>
+                            <li><a href="#">جوراب ورزشی</a></li>
+                            <li class="flex items-center gap-x-1">
+                                <a href="#">حراج ورزشی</a>
+                                <span
+                                    class="w-8 rounded flex-center bg-red-600 text-white p-0.5 text-[10px]">ویژه</span>
+                            </li>
+                            <li><a href="#">لوازم جانبی ورزشی</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="menu-item group">
-                    <a href="#">بـچه گـانـه</a>
-                    <svg class="size-3 group-hover:rotate-180 transition-transform duration-300">
+                    <a href="#" class="menu-item-link">بـچه گـانـه</a>
+                    <svg class="menu-item-icon">
                         <use href="#chevron" />
                     </svg>
+                     <!-- SUBMENU -->
+                     <div class="submenu">
+                        <ul class="submenu-list">
+                            <span
+                                class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
+                                <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">لــباس بـچـه‌گـانـه</p>
+                                <svg class="size-5">
+                                    <use href="#chevron" />
+                                </svg>
+                            </span>
+                            <li><a href="#">تی‌شرت بچه‌گانه</a></li>
+                            <li><a href="#">پیراهن بچه‌گانه</a></li>
+                            <li><a href="#">شلوار بچه‌گانه</a></li>
+                            <li><a href="#">ست رسمی بچه‌گانه</a></li>
+                            <li><a href="#">هودی و سویشرت</a></li>
+                            <li><a href="#">کاپشن و بارانی</a></li>
+                            <li class="flex items-center gap-x-1">
+                                <a href="#">حراج استایل</a>
+                                <span
+                                    class="w-8 rounded flex-center bg-red-600 text-white p-0.5 text-[10px]">ویژه</span>
+                            </li>
+                            <li><a href="#">ژاکت و پلیور</a></li>
+                        </ul>
+                        <ul class="submenu-list">
+                            <span
+                                class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
+                                <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">کــفش بـچـه‌گـانـه</p>
+                                <svg class="size-5">
+                                    <use href="#chevron" />
+                                </svg>
+                            </span>
+                            <li><a href="#">کفش رسمی بچه‌گانه</a></li>
+                            <li><a href="#">کفش ورزشی بچه‌گانه</a></li>
+                            <li><a href="#">کفش راحتی بچه‌گانه</a></li>
+                            <li><a href="#">صندل بچه‌گانه</a></li>
+                            <li><a href="#">بوت بچه‌گانه</a></li>
+                            <li><a href="#">کفش پیاده‌روی</a></li>
+                            <li><a href="#">کفش کوهنوردی</a></li>
+                            <li><a href="#">دمپایی</a></li>
+                        </ul>
+                        <ul class="submenu-list">
+                            <span
+                                class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
+                                <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">اکــسـسوری بـچـه‌گـانـه</p>
+                                <svg class="size-5">
+                                    <use href="#chevron" />
+                                </svg>
+                            </span>
+                            <li><a href="#">کمربند بچه‌گانه</a></li>
+                            <li><a href="#">ساعت بچه‌گانه</a></li>
+                            <li class="flex items-center gap-x-1">
+                                <a href="#">عینک آفتابی بچه‌گانه</a>
+                                <span
+                                    class="w-8 rounded flex-center bg-green-600 text-white p-0.5 text-[10px]">جدید</span>
+                            </li>
+                            <li><a href="#">حـراج استایل</a></li>
+                            <li><a href="#">کراوات و پاپیون</a></li>
+                            <li><a href="#">دستکش بچه‌گانه</a></li>
+                            <li><a href="#">شال‌گردن بچه‌گانه</a></li>
+                            <li><a href="#">کلاه بچه‌گانه</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
+                <li class="hover:opacity-50 transition-opacity duration-300">
                     <a href="#">اکـسسوری</a>
                 </li>
                 <span class="w-1 h-8 flex border-l-2 border-zinc-200 dark:border-zinc-600"></span>
-                <li>
+                <li class="hover:opacity-50 transition-opacity duration-300">
                     <a href="#">حـراج اسـتایل</a>
                 </li>
-                <li>
+                <li class="hover:opacity-50 transition-opacity duration-300">
                     <a href="#">فــروشــگـاه</a>
                 </li>
-                <li>
+                <li class="hover:opacity-50 transition-opacity duration-300">
                     <a href="#">تـماس بـا مـا</a>
                 </li>
-                <li>
+                <li class="hover:opacity-50 transition-opacity duration-300">
                     <a href="#">دربـاره مـا</a>
                 </li>
             </ul>
         </nav>
+        
+        <!-- MOBILE -->
+        <nav class="flex lg:hidden">MOBILE</nav>
     </header>
 
 
