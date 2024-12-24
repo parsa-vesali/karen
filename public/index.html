@@ -84,6 +84,25 @@
             stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </symbol>
+        <symbol id="squares" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+        </symbol>
+        <symbol id="check-badge" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+        </symbol>
+        <symbol id="phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+        </symbol>
+        <symbol id="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </symbol>
 
     </svg>
 
@@ -91,7 +110,7 @@
         <!-- DESKTOP -->
         <nav class="hidden z-40 lg:flex flex-col">
             <!-- TOP NAV -->
-            <div class="container flex items-center justify-between pt-8">
+            <div class="container flex items-center justify-between pt-7">
                 <!-- SEARCHBAR -->
                 <div class="search-container">
                     <button
@@ -101,7 +120,10 @@
                                 <use href="#search" />
                             </svg>
                         </label>
-                        <input type="text" placeholder="جستجو برای محصولات...">
+                        <p class="pl-4 text-zinc-400">
+                            جستجو در <span class="font-MorabbaMedium text-zinc-800 dark:text-zinc-400">کارن
+                                اسـتایل</span>
+                        </p>
                     </button>
                     <!-- SEARCH MODAL -->
                     <div class="search-modal">
@@ -170,7 +192,7 @@
                         </svg>
                         <!-- BADGE -->
                         <span
-                            class="absolute -top-1 -right-2 w-3.5 h-3.5 text-xs bg-red-600 text-white flex items-center justify-center rounded-full">0</span>
+                            class="absolute -top-1 -right-2 w-3.5 h-3.5 text-xs bg-red-500 text-white flex items-center justify-center rounded-full">0</span>
                         <!-- SHOPPING CART BOX -->
                         <div
                             class="absolute w-[350px] p-4 flex bg-white dark:bg-zinc-800 rounded shadow top-20
@@ -205,7 +227,7 @@
                             <use href="#heart" />
                         </svg>
                         <span
-                            class="absolute -top-1 -right-2 w-3.5 h-3.5 text-xs bg-red-600 text-white flex items-center justify-center rounded-full">0</span>
+                            class="absolute -top-1 -right-2 w-3.5 h-3.5 text-xs bg-red-500 text-white flex items-center justify-center rounded-full">0</span>
                     </button>
                     <!-- TOGGLE THEME -->
                     <button class="toggle-theme action-btn ">
@@ -227,7 +249,7 @@
                 </div>
             </div>
             <!-- MENU -->
-            <ul class="relative flex items-center justify-center gap-x-6 w-full mx-auto pt-12 child:cursor-pointer">
+            <ul class="relative flex items-center justify-center gap-x-6 w-full mx-auto pt-9 child:cursor-pointer">
                 <li class="menu-item group">
                     <a href="#" class="menu-item-link">مـردانـه</a>
                     <svg class="menu-item-icon ">
@@ -252,7 +274,7 @@
                             <li class="flex items-center gap-x-1">
                                 <a href="#">حراج استایل</a>
                                 <span
-                                    class="w-8 rounded flex-center bg-red-600 text-white p-0.5 text-[10px]">ویژه</span>
+                                    class="w-8 rounded flex-center bg-red-500 text-white p-0.5 text-[10px]">ویژه</span>
                             </li>
                             <li><a href="#">ژاکت و پلیور</a></li>
                         </ul>
@@ -328,7 +350,7 @@
                             <li class="flex items-center gap-x-1">
                                 <a href="#">حراج ورزشی</a>
                                 <span
-                                    class="w-8 rounded flex-center bg-red-600 text-white p-0.5 text-[10px]">ویژه</span>
+                                    class="w-8 rounded flex-center bg-red-500 text-white p-0.5 text-[10px]">ویژه</span>
                             </li>
                             <li><a href="#">لوازم جانبی ورزشی</a></li>
                         </ul>
@@ -358,7 +380,7 @@
                             <li class="flex items-center gap-x-1">
                                 <a href="#">حراج استایل</a>
                                 <span
-                                    class="w-8 rounded flex-center bg-red-600 text-white p-0.5 text-[10px]">ویژه</span>
+                                    class="w-8 rounded flex-center bg-red-500 text-white p-0.5 text-[10px]">ویژه</span>
                             </li>
                             <li><a href="#">ژاکت و پلیور</a></li>
                         </ul>
@@ -433,7 +455,7 @@
                             <li class="flex items-center gap-x-1">
                                 <a href="#">حراج ورزشی</a>
                                 <span
-                                    class="w-8 rounded flex-center bg-red-600 text-white p-0.5 text-[10px]">ویژه</span>
+                                    class="w-8 rounded flex-center bg-red-500 text-white p-0.5 text-[10px]">ویژه</span>
                             </li>
                             <li><a href="#">لوازم جانبی ورزشی</a></li>
                         </ul>
@@ -463,7 +485,7 @@
                             <li class="flex items-center gap-x-1">
                                 <a href="#">حراج استایل</a>
                                 <span
-                                    class="w-8 rounded flex-center bg-red-600 text-white p-0.5 text-[10px]">ویژه</span>
+                                    class="w-8 rounded flex-center bg-red-500 text-white p-0.5 text-[10px]">ویژه</span>
                             </li>
                             <li><a href="#">ژاکت و پلیور</a></li>
                         </ul>
@@ -537,15 +559,175 @@
                     </svg>
                 </button>
                 <!-- MENU MOBILE -->
-                <div class="menu-mobile">
-                    <div class="flex">
+                <div class="menu-mobile flex flex-col">
+                    <!--  MENU MOBILE header -->
+                    <div class="flex w-full items-center justify-between border-b-normal pb-4">
+                        <a href="index.html" class="text-xl font-MorabbaBold">
+                            کارن استایل
+                        </a>
                         <button class="close-menu-mobile">
                             <svg class="size-5 text-zinc-500 dark:text-zinc-200">
                                 <use href="#x-mark" />
                             </svg>
                         </button>
                     </div>
+                    <!--  MENU MOBILE SEARCH -->
+                    <button class="flex items-center gap-x-1 p-2 mt-5 bg-zinc-100  dark:bg-zinc-900 rounded">
+                        <label for="#search-box">
+                            <svg class="size-5 text-zinc-400">
+                                <use href="#search" />
+                            </svg>
+                        </label>
+                        <input type="text" class="text-sm" placeholder="جستجو برای محصولات...">
+                    </button>
+                    <!-- MENU MOBILE CATEGORY & ACTION  -->
+                    <ul class="flex flex-col gap-y-5 text-zinc-600 dark:text-zinc-300 mt-4 border-t-normal pt-3 ">
+                        <li>
+                            <span class="open-category mobile-menu-item">
+                                <svg class="size-5">
+                                    <use href="#squares" />
+                                </svg>
+                                <a href="#">دسته بندی</a>
+                            </span>
+                            <!-- MENU CATEGORY SLIDE -->
+                            <div class="category-slide">
+                                <div class=" w-full border-b-normal pb-4">
+                                    <span class="close-category-slide flex items-center gap-x-1 cursor-pointer">
+                                        <svg class="size-4">
+                                            <use href="#arrow" />
+                                        </svg>
+                                        دسته بندی
+                                    </span>
+                                </div>
+                                <ul class="child:flex pt-4 child:cursor-pointer space-y-2">
+                                    <li>
+                                        <div class="relative open-detail-category">
+                                            <span class="mobile-menu-category-badge">
+                                                مـردانـه
+                                            </span>
+                                            <img src="./images/menu/1.jpg" class="h-28 w-full object-cover rounded"
+                                                alt="">
+                                        </div>
+                                        <!-- MEN SLIDE -->
+                                        <div class="detail-category">
+                                            <span
+                                                class="close-detail-category flex items-center gap-x-1 cursor-pointer">
+                                                <svg class="size-4">
+                                                    <use href="#arrow" />
+                                                </svg>
+                                                مردانه
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="relative open-detail-category">
+                                            <span class="mobile-menu-category-badge">
+                                                زنـانـه
+                                            </span>
+                                            <img src="./images/menu/2.jpg" class="h-28 w-full object-cover rounded"
+                                                alt="">
+                                        </div>
+                                        <div class="detail-category">
+                                            <span
+                                                class="close-detail-category flex items-center gap-x-1 cursor-pointer">
+                                                <svg class="size-4">
+                                                    <use href="#arrow" />
+                                                </svg>
+                                                زنـانـه
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="relative open-detail-category">
+                                            <span class="mobile-menu-category-badge">
+                                                بچه‌گانه
+                                            </span>
+                                            <img src="./images/menu/3.jpg" class="h-28 w-full object-cover rounded"
+                                                alt="">
+                                        </div>
+                                        <div class="detail-category">
+                                            <span
+                                                class="close-detail-category flex items-center gap-x-1 cursor-pointer">
+                                                <svg class="size-4">
+                                                    <use href="#arrow" />
+                                                </svg>
+                                                بچه‌گانه
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="relative open-detail-category">
+                                            <span class="mobile-menu-category-badge">
+                                                اکـسسوری
+                                            </span>
+                                            <img src="./images/menu/4.jpg" class="h-28 w-full object-cover rounded"
+                                                alt="">
+                                        </div>
+                                        <div class="detail-category">
+                                            <span
+                                                class="close-detail-category flex items-center gap-x-1 cursor-pointer">
+                                                <svg class="size-4">
+                                                    <use href="#arrow" />
+                                                </svg>
+                                                اکـسسوری
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <svg class="size-5">
+                                <use href="#user" />
+                            </svg>
+                            <a href="#">حساب کاربری</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <svg class="size-5">
+                                <use href="#heart" />
+                            </svg>
+                            <a href="#">علاقه مندی ها</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <svg class="size-5">
+                                <use href="#shopping-cart" />
+                            </svg>
+                            <a href="#">سبد خرید</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <svg class="size-5">
+                                <use href="#check-badge" />
+                            </svg>
+                            <a href="#">دربـاره مـا</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <svg class="size-5">
+                                <use href="#phone" />
+                            </svg>
+                            <a href="#">تـماس بـا مـا</a>
+                        </li>
+                        <li class="toggle-theme mobile-menu-item child:items-center child:gap-x-1">
+                            <span class="flex dark:hidden">
+                                <svg class="size-5">
+                                    <use href="#moon" />
+                                </svg>
+                                <p>حالت دارک</p>
+                            </span>
+                            <span class="hidden dark:flex">
+                                <svg class="size-5">
+                                    <use href="#sun" />
+                                </svg>
+                                <p>حالت روشن</p>
+                            </span>
+
+                        </li>
+                    </ul>
+                    <!-- MENU MOBILE FOOTER -->
+                    <span class="absolute bottom-3 left-[48%] text-zinc-500 text-sm">
+                        KarenStyle@
+                    </span>
                 </div>
+
 
                 <!-- LOGO -->
                 <a href="index.html" class="text-xl font-MorabbaBold">
@@ -564,7 +746,7 @@
                 <!-- SHOPPING CART BOX -->
                 <div class="mobile-cart">
                     <!-- CART HEADER -->
-                    <div class="flex w-full h-fit justify-between border-b-2 border-zinc-200 dark:border-zinc-700 pb-2">
+                    <div class="flex w-full h-fit justify-between border-b-normal pb-2">
                         <p class="font-DanaMedium text-lg">سبد خرید</p>
                         <span class="close-mobile-cart w-fit cursor-pointer">
                             <svg class="size-5 text-zinc-500 dark:text-zinc-200">
@@ -596,6 +778,9 @@
                 </div>
             </div>
         </nav>
+
+        <!-- SLIDER -->
+        <img src="./images/slider/1.jpg" class="h-[90vh] object-cover w-full absolute top-0 -z-10" alt="">
     </header>
 
 

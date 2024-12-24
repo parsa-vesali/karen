@@ -9,6 +9,9 @@ const closeCartButton = document.querySelector('.close-mobile-cart');
 const mobileMenu = document.querySelector('.menu-mobile');
 const openMenuButton = document.querySelector('.open-menu-mobile');
 const closeMenuButton = document.querySelector('.close-menu-mobile');
+const openCategory = document.querySelector('.open-category');
+const categorySlide = document.querySelector('.category-slide');
+const closeCategorySlide = document.querySelector('.close-category-slide');
 
 // Toggle theme between light and dark modes
 const toggleTheme = () => {
@@ -31,6 +34,7 @@ searchButton.addEventListener('click', () => {
 // Close search modal
 closeSearchModalButton.addEventListener('click', () => {
     searchModal.classList.remove('active');
+    overlay.classList.remove('active');
 });
 
 // Close active elements when overlay is clicked
@@ -39,6 +43,7 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
     mobileMenu.classList.remove('active');
     searchModal.classList.remove('active');
+    categorySlide.classList.remove('active')
 });
 
 // Open mobile cart and activate overlay
@@ -63,13 +68,35 @@ openMenuButton.addEventListener('click', () => {
 closeMenuButton.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
     overlay.classList.remove('active');
+    categorySlide.classList.remove('active')
+
 });
 
-// Close search modal if clicked outside its area
-document.addEventListener('click', (event) => {
-    const isClickOutsideSearch = !searchModal.contains(event.target) && !searchButton.contains(event.target);
-    if (searchModal.classList.contains('active') && isClickOutsideSearch) {
-        searchModal.classList.remove('active');
-        overlay.classList.remove('active');
-    }
+openCategory.addEventListener('click', () => {
+    categorySlide.classList.add('active')
+})
+
+closeCategorySlide.addEventListener('click', () => {
+    categorySlide.classList.remove('active')
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.open-detail-category').forEach(item => {
+        item.addEventListener('click', () => {
+            const detailCategory = item.nextElementSibling;
+            if (detailCategory) {
+                detailCategory.classList.add('active');
+            }
+        });
+    });
+
+    document.querySelectorAll('.close-detail-category').forEach(closeButton => {
+        closeButton.addEventListener('click', () => {
+            const detailCategory = closeButton.closest('.detail-category');
+            if (detailCategory) {
+                detailCategory.classList.remove('active');
+            }
+        });
+    });
 });
