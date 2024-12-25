@@ -100,3 +100,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.querySelectorAll('.open-submenu').forEach(item => {
+    item.addEventListener('click', function () {
+        const submenu = this.nextElementSibling;
+        const svg = this.querySelector('svg'); // انتخاب SVG داخل آیتم کلیک شده
+
+        // بررسی اگر فعال است، آن را غیرفعال کن و کلاس rotate-90 را حذف کن
+        if (submenu.classList.contains('active')) {
+            submenu.classList.remove('active');
+            svg.classList.remove('rotate-90');
+        } else {
+            // غیر فعال کردن سایر منوها و حذف کلاس rotate-90 از تمام SVG‌ها
+            document.querySelectorAll('.menu-category-submenu').forEach(sub => {
+                sub.classList.remove('active');
+            });
+            document.querySelectorAll('.open-submenu svg').forEach(svgItem => {
+                svgItem.classList.remove('rotate-90');
+            });
+
+            // فعال کردن منوی مرتبط و اضافه کردن کلاس rotate-90 به SVG مرتبط
+            submenu.classList.add('active');
+            svg.classList.add('rotate-90');
+        }
+    });
+});
+;
+

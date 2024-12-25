@@ -147,11 +147,19 @@
   }
 
   .detail-category {
-    @apply absolute w-full h-screen bg-white dark:bg-zinc-800 p-4 inset-y-0 inset-x-0 translate-x-72 z-30 transition-transform duration-300 ;
+    @apply absolute w-full h-screen bg-white dark:bg-zinc-800 py-4 inset-y-0 inset-x-0 translate-x-72 z-30 transition-transform duration-300 ;
   }
 
   .detail-category.active {
     @apply translate-x-0 
+  }
+
+  .menu-category-submenu {
+    @apply  flex-col space-y-3 text-sm p-2.5 opacity-0 invisible hidden transition-opacity duration-300
+  }
+
+  .menu-category-submenu.active {
+    @apply opacity-100 visible flex
   }
 }
 
