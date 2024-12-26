@@ -155,7 +155,7 @@
   }
 
   .menu-category-submenu {
-    @apply  flex-col space-y-3 text-sm p-2.5 opacity-0 invisible hidden transition-opacity duration-300
+    @apply  flex-col space-y-3 text-sm py-2.5 pr-5 opacity-0 invisible hidden transition-opacity duration-300
   }
 
   .menu-category-submenu.active {

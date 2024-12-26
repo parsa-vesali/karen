@@ -1077,7 +1077,9 @@ input,
 }
 
 .menu-category-submenu {
-  padding: 0.625rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-right: 1.25rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   opacity: 0;
@@ -1197,14 +1199,14 @@ input,
   margin-right: 7rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mt-10 {
@@ -1332,10 +1334,6 @@ input,
   cursor: pointer;
 }
 
-.list-disc {
-  list-style-type: disc;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -1389,10 +1387,6 @@ input,
   row-gap: 1.25rem;
 }
 
-.gap-y-2 {
-  row-gap: 0.5rem;
-}
-
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1403,12 +1397,6 @@ input,
   --tw-divide-y-reverse: 0;
   border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
-}
-
-.divide-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-x-reverse: 0;
-  border-right-width: calc(2px * var(--tw-divide-x-reverse));
-  border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
 }
 
 .rounded {
@@ -1644,6 +1632,12 @@ input,
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .delay-75 {
   transition-delay: 75ms;
 }
@@ -1682,15 +1676,6 @@ input,
   opacity: 1;
 }
 
-.child\:my-2 > * {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.child\:mb-2 > * {
-  margin-bottom: 0.5rem;
-}
-
 .child\:flex > * {
   display: flex;
 }
@@ -1717,9 +1702,27 @@ input,
   padding-right: 1rem;
 }
 
-.child\:py-2 > * {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.child\:py-3 > * {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.child\:transition-all > * {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.child\:duration-300 > * {
+  transition-duration: 300ms;
+}
+
+.child-hover\:mr-1 > *:hover {
+  margin-right: 0.25rem;
+}
+
+.child-hover\:mr-2 > *:hover {
+  margin-right: 0.5rem;
 }
 
 .hover\:opacity-50:hover {
