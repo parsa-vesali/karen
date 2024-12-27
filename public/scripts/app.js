@@ -1,3 +1,10 @@
+// Constants for class names
+const ACTIVE_CLASS = 'active';
+const ROTATE_CLASS = 'rotate-90';
+const DARK_THEME = 'dark';
+const LIGHT_THEME = 'light';
+
+// Selectors
 const themeToggleButtons = document.querySelectorAll('.toggle-theme');
 const searchButton = document.querySelector('.search-btn-open');
 const searchModal = document.querySelector('.search-modal');
@@ -13,80 +20,78 @@ const openCategory = document.querySelector('.open-category');
 const categorySlide = document.querySelector('.category-slide');
 const closeCategorySlide = document.querySelector('.close-category-slide');
 
-// Toggle theme between light and dark modes
-const toggleTheme = () => {
-    const isDarkMode = localStorage.getItem('theme') === 'dark';
-    document.documentElement.classList.toggle('dark', !isDarkMode);
-    localStorage.setItem('theme', isDarkMode ? 'light' : 'dark');
+// Utility Functions
+const toggleClass = (element, className, condition) => {
+    if (condition) {
+        element.classList.add(className);
+    } else {
+        element.classList.remove(className);
+    }
 };
 
+const closeAllActiveElements = () => {
+    [mobileCart, overlay, mobileMenu, searchModal, categorySlide].forEach(element => {
+        element.classList.remove(ACTIVE_CLASS);
+    });
+};
+
+// Theme Toggle Function
+const toggleTheme = () => {
+    const isDarkMode = localStorage.getItem('theme') === DARK_THEME;
+    document.documentElement.classList.toggle(DARK_THEME, !isDarkMode);
+    localStorage.setItem('theme', isDarkMode ? LIGHT_THEME : DARK_THEME);
+};
+
+// Event Listeners
 // Attach event listeners to theme toggle buttons
 themeToggleButtons.forEach(button => {
     button.addEventListener('click', toggleTheme);
 });
 
-// Open search modal and activate overlay
-searchButton.addEventListener('click', () => {
-    searchModal.classList.add('active');
-    overlay.classList.add('active');
+// Open search modal
+searchButton?.addEventListener('click', () => {
+    toggleClass(searchModal, ACTIVE_CLASS, true);
+    toggleClass(overlay, ACTIVE_CLASS, true);
 });
 
 // Close search modal
-closeSearchModalButton.addEventListener('click', () => {
-    searchModal.classList.remove('active');
-    overlay.classList.remove('active');
+closeSearchModalButton?.addEventListener('click', closeAllActiveElements);
+
+// Close elements on overlay click
+overlay?.addEventListener('click', closeAllActiveElements);
+
+// Open and close mobile cart
+openCartButton?.addEventListener('click', () => {
+    toggleClass(mobileCart, ACTIVE_CLASS, true);
+    toggleClass(overlay, ACTIVE_CLASS, true);
 });
 
-// Close active elements when overlay is clicked
-overlay.addEventListener('click', () => {
-    mobileCart.classList.remove('active');
-    overlay.classList.remove('active');
-    mobileMenu.classList.remove('active');
-    searchModal.classList.remove('active');
-    categorySlide.classList.remove('active')
+closeCartButton?.addEventListener('click', closeAllActiveElements);
+
+// Open and close mobile menu
+openMenuButton?.addEventListener('click', () => {
+    toggleClass(mobileMenu, ACTIVE_CLASS, true);
+    toggleClass(overlay, ACTIVE_CLASS, true);
 });
 
-// Open mobile cart and activate overlay
-openCartButton.addEventListener('click', () => {
-    mobileCart.classList.add('active');
-    overlay.classList.add('active');
+closeMenuButton?.addEventListener('click', closeAllActiveElements);
+
+// Open and close category slide
+openCategory?.addEventListener('click', () => {
+    toggleClass(categorySlide, ACTIVE_CLASS, true);
 });
 
-// Close mobile cart
-closeCartButton.addEventListener('click', () => {
-    mobileCart.classList.remove('active');
-    overlay.classList.remove('active');
+closeCategorySlide?.addEventListener('click', () => {
+    toggleClass(categorySlide, ACTIVE_CLASS, false);
 });
 
-// Open mobile menu and activate overlay
-openMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-    overlay.classList.add('active');
-});
-
-// Close mobile menu
-closeMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    overlay.classList.remove('active');
-    categorySlide.classList.remove('active')
-
-});
-
-openCategory.addEventListener('click', () => {
-    categorySlide.classList.add('active')
-})
-
-closeCategorySlide.addEventListener('click', () => {
-    categorySlide.classList.remove('active')
-})
-
-
-document.addEventListener('DOMContentLoaded', () => {
+// Category Details
+const initializeCategoryDetails = () => {
     document.querySelectorAll('.open-detail-category').forEach(item => {
         item.addEventListener('click', () => {
             const detailCategory = item.nextElementSibling;
             if (detailCategory) {
-                detailCategory.classList.add('active');
+                toggleClass(detailCategory, ACTIVE_CLASS, true);
             }
         });
     });
@@ -95,29 +100,37 @@ document.addEventListener('DOMContentLoaded', () => {
         closeButton.addEventListener('click', () => {
             const detailCategory = closeButton.closest('.detail-category');
             if (detailCategory) {
-                detailCategory.classList.remove('active');
+                toggleClass(detailCategory, ACTIVE_CLASS, false);
             }
         });
     });
-});
+};
 
-document.querySelectorAll('.open-submenu').forEach(item => {
-    item.addEventListener('click', function () {
-        const submenu = this.nextElementSibling;
-        const svg = this.querySelector('svg');
-        const isActive = submenu.classList.contains('active');
+// Submenu Toggle
+const initializeSubmenuToggle = () => {
+    document.querySelectorAll('.open-submenu').forEach(item => {
+        item.addEventListener('click', function () {
+            const submenu = this.nextElementSibling;
+            const svg = this.querySelector('svg');
+            const isActive = submenu.classList.contains(ACTIVE_CLASS);
 
-        document.querySelectorAll('.menu-category-submenu').forEach(sub => {
-            sub.classList.remove('active');
+            document.querySelectorAll('.menu-category-submenu').forEach(sub => {
+                sub.classList.remove(ACTIVE_CLASS);
+            });
+            document.querySelectorAll('.open-submenu svg').forEach(svgItem => {
+                svgItem.classList.add(ROTATE_CLASS);
+            });
+
+            if (!isActive) {
+                toggleClass(submenu, ACTIVE_CLASS, true);
+                toggleClass(svg, ROTATE_CLASS, false);
+            }
         });
-        document.querySelectorAll('.open-submenu svg').forEach(svgItem => {
-            svgItem.classList.add('rotate-90');
-        });
-        if (!isActive) {
-            submenu.classList.add('active');
-            svg.classList.remove('rotate-90');
-        }
     });
+};
+
+// Initialize Event Listeners
+document.addEventListener('DOMContentLoaded', () => {
+    initializeCategoryDetails();
+    initializeSubmenuToggle();
 });
-
-
