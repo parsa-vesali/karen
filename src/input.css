@@ -84,7 +84,7 @@
   /* MENU */
 
   .submenu {
-    @apply absolute inset-0 w-full top-44 h-96 p-6 flex justify-center gap-x-14 xl:gap-x-20 bg-white dark:bg-zinc-800 rounded shadow border border-zinc-100 dark:border-none opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-24 duration-300 delay-75
+    @apply absolute inset-0 w-full top-40 h-96 p-6 flex justify-center gap-x-14 xl:gap-x-20 bg-white dark:bg-zinc-800 rounded shadow border border-zinc-100 dark:border-none opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-20 duration-300 delay-75
   }
 
   .menu-item {
@@ -100,7 +100,7 @@
   }
 
   .submenu-list {
-    @apply flex flex-col items-start space-y-3.5 child:text-zinc-500 child:dark:text-zinc-300 child-hover:text-zinc-900 dark:child-hover:text-zinc-100 child:transition-all
+    @apply flex flex-col items-start space-y-3.5 child:text-zinc-500 child:dark:text-zinc-400 child-hover:text-zinc-900 dark:child-hover:text-zinc-100 child:transition-all
   }
   
 
@@ -161,5 +161,11 @@
   .menu-category-submenu.active {
     @apply opacity-100 visible flex
   }
+
+  .bottom-navbar {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    @apply flex items-center justify-between gap-x-4 lg:hidden absolute w-full px-4 py-2 inset-x-0 bottom-0 bg-white dark:bg-zinc-800 rounded-t
+    text-sm child:flex child:flex-col child:gap-y-1.5 child:items-center child:cursor-pointer child:action-btn border-t-2 border-t-zinc-100
+  } 
 }
 

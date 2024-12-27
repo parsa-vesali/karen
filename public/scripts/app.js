@@ -105,19 +105,14 @@ document.querySelectorAll('.open-submenu').forEach(item => {
     item.addEventListener('click', function () {
         const submenu = this.nextElementSibling;
         const svg = this.querySelector('svg');
-
-        // بررسی اگر منو باز است
         const isActive = submenu.classList.contains('active');
 
-        // بستن همه منوها و بازگرداندن چرخش تمام SVGها
         document.querySelectorAll('.menu-category-submenu').forEach(sub => {
             sub.classList.remove('active');
         });
         document.querySelectorAll('.open-submenu svg').forEach(svgItem => {
             svgItem.classList.add('rotate-90');
         });
-
-        // اگر منو کلیک شده باز نیست، آن را باز کن و چرخش SVG را حذف کن
         if (!isActive) {
             submenu.classList.add('active');
             svg.classList.remove('rotate-90');

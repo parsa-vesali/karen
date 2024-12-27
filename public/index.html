@@ -103,7 +103,10 @@
             stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
         </symbol>
-
+        <symbol id="home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </symbol>
+          
     </svg>
 
     <header class="relative">
@@ -121,7 +124,7 @@
                             </svg>
                         </label>
                         <p class="pl-4 text-zinc-400">
-                            جستجو در <span class="font-MorabbaMedium text-zinc-800 dark:text-zinc-400">کارن
+                            جستجو در <span class="font-MorabbaMedium">کارن
                                 اسـتایل</span>
                         </p>
                     </button>
@@ -192,7 +195,12 @@
                         </svg>
                         <!-- BADGE -->
                         <span
-                            class="absolute -top-1 -right-2 w-3.5 h-3.5 text-xs bg-red-500 text-white flex items-center justify-center rounded-full">0</span>
+                            class="absolute -top-1 -right-2 w-3.5 h-3.5 text-xs  text-white flex items-center justify-center rounded-full">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span
+                                class="relative rounded-full h-3.5 w-3.5 flex items-center pt-1 justify-center bg-red-500">2</span>
+                        </span>
                         <!-- SHOPPING CART BOX -->
                         <div
                             class="absolute w-[350px] p-4 flex bg-white dark:bg-zinc-800 rounded shadow top-20
@@ -245,11 +253,10 @@
                         </svg>
                         ورود | ثبت‌نام
                     </button>
-
                 </div>
             </div>
             <!-- MENU -->
-            <ul class="relative flex items-center justify-center gap-x-6 w-full mx-auto pt-9 child:cursor-pointer">
+            <ul class="relative flex items-center justify-center gap-x-6 w-full mx-auto pt-8 child:cursor-pointer">
                 <li class="menu-item group">
                     <a href="#" class="menu-item-link">مـردانـه</a>
                     <svg class="menu-item-icon ">
@@ -261,7 +268,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">لــباس مـردانـه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -282,7 +289,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">کــفش مــردانـه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -299,7 +306,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">کــیف مــردانـه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -316,7 +323,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">اکــسـسوری مــردانـه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -337,7 +344,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">لـباس ورزشـی مــردانـه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -367,7 +374,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">لــباس زنـانـه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -388,7 +395,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">کــفش زنــانه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -405,7 +412,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">کــیف زنــانه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -421,7 +428,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">اکــسـسوری زنــانه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -442,7 +449,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">لـباس ورزشـی زنــانه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -472,7 +479,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">لــباس بـچـه‌گـانـه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -493,7 +500,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">کــفش بـچـه‌گـانـه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -510,7 +517,7 @@
                             <span
                                 class="flex items-center gap-x-1 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600">
                                 <p class="font-DanaMedium text-zinc-900 dark:text-zinc-100">اکــسـسوری بـچـه‌گـانـه</p>
-                                <svg class="size-5">
+                                <svg class="size-4">
                                     <use href="#chevron" />
                                 </svg>
                             </span>
@@ -571,17 +578,8 @@
                             </svg>
                         </button>
                     </div>
-                    <!--  MENU MOBILE SEARCH -->
-                    <button class="flex items-center gap-x-1 p-2 mt-5 bg-zinc-100  dark:bg-zinc-900 rounded">
-                        <label for="#search-box">
-                            <svg class="size-5 text-zinc-400">
-                                <use href="#search" />
-                            </svg>
-                        </label>
-                        <input type="text" class="text-sm" placeholder="جستجو برای محصولات...">
-                    </button>
                     <!-- MENU MOBILE CATEGORY & ACTION  -->
-                    <ul class="flex flex-col gap-y-5 text-zinc-700 dark:text-zinc-200 mt-4 border-t-normal pt-3 ">
+                    <ul class="flex flex-col gap-y-5 text-zinc-700 dark:text-zinc-200 mt-4">
                         <li>
                             <span class="open-category mobile-menu-item">
                                 <svg class="size-5">
@@ -606,7 +604,7 @@
                                                 مـردانـه
                                             </span>
                                             <img src="./images/menu/1.jpg" class="h-28 w-full object-cover rounded"
-                                                alt=""> 
+                                                alt="">
                                         </div>
                                         <!-- MEN SLIDE -->
                                         <div class="detail-category">
@@ -617,7 +615,8 @@
                                                 </svg>
                                                 مردانه
                                             </span>
-                                            <ul class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-zinc-700 child:px-4">
+                                            <ul
+                                                class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-zinc-700 child:px-4">
                                                 <li>
                                                     <span class="flex group items-center justify-between open-submenu">
                                                         <a href="#">لــباس مـردانـه</a>
@@ -625,7 +624,8 @@
                                                             <use href="#chevron" />
                                                         </svg>
                                                     </span>
-                                                    <ul class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
                                                         <li href="">تی شرت</li>
                                                         <li href="">پیراهن</li>
                                                         <li href="">سویشرت</li>
@@ -640,7 +640,8 @@
                                                             <use href="#chevron" />
                                                         </svg>
                                                     </span>
-                                                    <ul  class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
                                                         <li href="">کفش رسمی</li>
                                                         <li href="">کفش اسپرت</li>
                                                         <li href="">کفش راحتی</li>
@@ -655,7 +656,8 @@
                                                             <use href="#chevron" />
                                                         </svg>
                                                     </span>
-                                                    <ul class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
                                                         <li href="">کیف دستی</li>
                                                         <li href="">کیف دوشی</li>
                                                         <li href="">کیف چرمی</li>
@@ -670,7 +672,8 @@
                                                             <use href="#chevron" />
                                                         </svg>
                                                     </span>
-                                                    <ul  class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
                                                         <li href="">عینک آفتابی</li>
                                                         <li href="">کمربند</li>
                                                         <li href="">ساعت مچی</li>
@@ -685,14 +688,15 @@
                                                             <use href="#chevron" />
                                                         </svg>
                                                     </span>
-                                                    <ul  class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
                                                         <li href="">تی‌شرت ورزشی</li>
                                                         <li href="">شلوار ورزشی</li>
                                                         <li href="">هودی ورزشی</li>
                                                         <li href="" class="text-red-500">لباس تخفیف‌دار</;>
                                                         <li href="">کفش ورزشی</li>
                                                     </ul>
-                                                </li>     
+                                                </li>
                                             </ul>
                                         </div>
                                     </li>
@@ -706,12 +710,95 @@
                                         </div>
                                         <div class="detail-category">
                                             <span
-                                                class="close-detail-category flex items-center gap-x-1 cursor-pointer">
+                                                class="close-detail-category flex-center gap-x-1 mx-4 bg-zinc-100 dark:bg-zinc-900 rounded p-2 cursor-pointer">
                                                 <svg class="size-4">
                                                     <use href="#arrow" />
                                                 </svg>
                                                 زنـانـه
                                             </span>
+                                            <ul
+                                                class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-zinc-700 child:px-4">
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">لــباس زنـانـه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">تی شرت</li>
+                                                        <li href="">پیراهن</li>
+                                                        <li href="">سویشرت</li>
+                                                        <li href="" class="text-red-500">حراج استایل</li>
+                                                        <li href="">شلوار</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">کــفش زنـانـه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">کفش رسمی</li>
+                                                        <li href="">کفش اسپرت</li>
+                                                        <li href="">کفش راحتی</li>
+                                                        <li href="" class="text-red-500">کفش تخفیف‌دار</li>
+                                                        <li href="">کفش مجلسی</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">کــیف زنـانـه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">کیف دستی</li>
+                                                        <li href="">کیف دوشی</li>
+                                                        <li href="">کیف چرمی</li>
+                                                        <li href="" class="text-red-500">کیف تخفیف‌دار</li>
+                                                        <li href="">کوله‌پشتی</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">اکــسـسوری زنـانـه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">عینک آفتابی</li>
+                                                        <li href="">کمربند</li>
+                                                        <li href="">ساعت مچی</li>
+                                                        <li href="" class="text-red-500">اکسسوری تخفیف‌دار</li>
+                                                        <li href="">کراوات</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">لـباس ورزشـی زنـانـه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">تی‌شرت ورزشی</li>
+                                                        <li href="">شلوار ورزشی</li>
+                                                        <li href="">هودی ورزشی</li>
+                                                        <li href="" class="text-red-500">لباس تخفیف‌دار</;>
+                                                        <li href="">کفش ورزشی</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </li>
                                     <li>
@@ -724,12 +811,95 @@
                                         </div>
                                         <div class="detail-category">
                                             <span
-                                                class="close-detail-category flex items-center gap-x-1 cursor-pointer">
+                                                class="close-detail-category flex-center gap-x-1 mx-4 bg-zinc-100 dark:bg-zinc-900 rounded p-2 cursor-pointer">
                                                 <svg class="size-4">
                                                     <use href="#arrow" />
                                                 </svg>
                                                 بچه‌گانه
                                             </span>
+                                            <ul
+                                                class="mt-5 flex flex-col child:py-3 divide-y-2 dark:divide-zinc-700 child:px-4">
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">لــباس بچه‌گانه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">تی شرت</li>
+                                                        <li href="">پیراهن</li>
+                                                        <li href="">سویشرت</li>
+                                                        <li href="" class="text-red-500">حراج استایل</li>
+                                                        <li href="">شلوار</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">کــفش بچه‌گانه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">کفش رسمی</li>
+                                                        <li href="">کفش اسپرت</li>
+                                                        <li href="">کفش راحتی</li>
+                                                        <li href="" class="text-red-500">کفش تخفیف‌دار</li>
+                                                        <li href="">کفش مجلسی</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">کــیف بچه‌گانه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">کیف دستی</li>
+                                                        <li href="">کیف دوشی</li>
+                                                        <li href="">کیف چرمی</li>
+                                                        <li href="" class="text-red-500">کیف تخفیف‌دار</li>
+                                                        <li href="">کوله‌پشتی</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">اکــسـسوری بچه‌گانه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">عینک آفتابی</li>
+                                                        <li href="">کمربند</li>
+                                                        <li href="">ساعت مچی</li>
+                                                        <li href="" class="text-red-500">اکسسوری تخفیف‌دار</li>
+                                                        <li href="">کراوات</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="flex group items-center justify-between open-submenu">
+                                                        <a href="#">لـباس ورزشـی بچه‌گانه</a>
+                                                        <svg class="size-4 rotate-90">
+                                                            <use href="#chevron" />
+                                                        </svg>
+                                                    </span>
+                                                    <ul
+                                                        class="menu-category-submenu child:list-disc child-hover:mr-2 child:transition-all child:duration-300">
+                                                        <li href="">تی‌شرت ورزشی</li>
+                                                        <li href="">شلوار ورزشی</li>
+                                                        <li href="">هودی ورزشی</li>
+                                                        <li href="" class="text-red-500">لباس تخفیف‌دار</;>
+                                                        <li href="">کفش ورزشی</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </li>
                                     <li>
@@ -739,15 +909,6 @@
                                             </span>
                                             <img src="./images/menu/4.jpg" class="h-28 w-full object-cover rounded"
                                                 alt="">
-                                        </div>
-                                        <div class="detail-category">
-                                            <span
-                                                class="close-detail-category flex items-center gap-x-1 cursor-pointer">
-                                                <svg class="size-4">
-                                                    <use href="#arrow" />
-                                                </svg>
-                                                اکـسسوری
-                                            </span>
                                         </div>
                                     </li>
                                 </ul>
@@ -799,11 +960,6 @@
 
                         </li>
                     </ul>
-                    <!-- MENU MOBILE FOOTER -->
-                    <span class="absolute bottom-3 left-[47%] text-sm text-zinc-400 flex gap-x-1">
-                        <p class="">KarenStyle</p>
-                        <img src="./images/icons/instagram.png" class="w-4 h-4 object-cover" alt="instagram">
-                    </span>
                 </div>
 
                 <!-- LOGO -->
@@ -816,9 +972,13 @@
                     <svg class="size-6 action-btn">
                         <use href="#shopping-bag" />
                     </svg>
-                    <!-- BADGE -->
                     <span
-                        class="absolute -top-1 -right-2 w-3.5 h-3.5 text-xs bg-red-600 text-white flex items-center justify-center rounded-full">0</span>
+                        class="absolute -top-1 -right-2 w-3.5 h-3.5 text-xs  text-white flex items-center justify-center rounded-full">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span
+                            class="relative rounded-full h-3.5 w-3.5 flex items-center pt-1 justify-center bg-red-500">2</span>
+                    </span>
                 </button>
                 <!-- SHOPPING CART BOX -->
                 <div class="mobile-cart">
@@ -860,12 +1020,45 @@
         <!-- <img src="./images/slider/1.jpg" class="h-[90vh] object-cover w-full absolute top-0 -z-10" alt=""> -->
     </header>
 
+    <!-- bottom-navbar -->
+    <a href="#" class="absolute bottom-20 left-5 bg-white shadow-md w-9 h-9 rounded flex-center lg:hidden dark:bg-zinc-800 hover:dark:bg-zinc-600 transition duration-300">
+        <svg class="size-5 rotate-180">
+            <use href="#chevron" />
+        </svg>
+    </a>
 
+    <ul class="bottom-navbar ">
+        <li>
+            <svg class="size-5">
+                <use href="#home" />
+            </svg>
+            <a href="index.html">صفحه اصلی</a>
+        </li>
+        <li>
+            <svg class="size-5">
+                <use href="#shopping-bag" />
+            </svg>
+            <a href="index.html">فروشگاه</a>
+        </li>
+        <li>
+            <svg class="size-5">
+                <use href="#search" />
+            </svg>
+            <a href="index.html">جستجو</a>
+        </li>
+        <li>
+            <svg class="size-5">
+                <use href="#user" />
+            </svg>
+            <a href="index.html">حساب کاربری</a>
+        </li>
+    </ul>
 
 
 
 
     <div class="overlay"></div>
+
     <script src="./scripts/app.js"></script>
 </body>
 
