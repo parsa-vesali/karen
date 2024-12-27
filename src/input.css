@@ -112,7 +112,7 @@
 
   /* overlay */
   .overlay {
-    @apply absolute inset-0 bg-black/40 w-full h-screen z-20 opacity-0 invisible transition-all duration-300;
+    @apply fixed inset-0 bg-black/40 w-full h-full z-20 opacity-0 invisible transition-all duration-300;
   }
 
   .overlay.active {
@@ -121,7 +121,7 @@
 
   /* MOBILE CART */
   .mobile-cart {
-    @apply absolute right-0 bottom-0 top-0 bg-white dark:bg-zinc-800 shadow p-4 w-72 translate-x-72 h-screen z-30 transition-transform duration-300;
+    @apply fixed right-0 bottom-0 top-0 bg-white dark:bg-zinc-800 shadow p-4 w-72 translate-x-72 min-h-screen z-30 transition-transform duration-300;
   }
   .mobile-cart.active {
     @apply translate-x-0;
@@ -129,7 +129,7 @@
 
   /* MOBILE MENU */
   .menu-mobile {
-    @apply absolute overflow-hidden right-0 bottom-0 top-0 bg-white dark:bg-zinc-800 shadow p-4 w-72 translate-x-72 h-screen z-30 transition-transform duration-300;
+    @apply fixed overflow-hidden right-0 bottom-0 top-0 bg-white dark:bg-zinc-800 shadow p-4 w-72 translate-x-72 h-screen z-30 transition-transform duration-300;
   }
   .menu-mobile.active {
     @apply translate-x-0;
@@ -168,7 +168,7 @@
   }
 
   .bottom-navbar {
-    @apply flex items-center justify-between gap-x-4 lg:hidden absolute w-full px-4 py-2 inset-x-0 bottom-0 bg-white dark:bg-zinc-800 rounded-t
+    @apply flex items-center justify-between gap-x-4 lg:hidden fixed w-full px-4 md:px-10 py-2 inset-x-0 bottom-0 bg-white text-zinc-600  dark:text-zinc-300 dark:bg-zinc-800 rounded-t
     text-sm child:flex child:flex-col child:gap-y-1.5 child:items-center child:cursor-pointer child:action-btn border-t-2 border-zinc-100 dark:border-zinc-900;
   }
 }

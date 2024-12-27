@@ -112,15 +112,14 @@
         </symbol>
     </svg>
 
-    <header class="relative">
+    <header class="relative h-[45vh] md:h-[70vh] lg:h-[90vh]">
         <!-- DESKTOP -->
         <nav class="hidden z-40 lg:flex flex-col">
             <!-- TOP NAV -->
             <div class="container flex items-center justify-between pt-7">
                 <!-- SEARCHBAR -->
                 <div class="search-container">
-                    <button
-                        class="search-btn-open flex items-center gap-x-1 border-b-2 border-b-zinc-600 pb-1.5">
+                    <button class="search-btn-open flex items-center gap-x-1 border-b-2 border-b-zinc-500 pb-1.5">
                         <label for="#search-box">
                             <svg class="size-6 text-zinc-600">
                                 <use href="#search" />
@@ -186,11 +185,11 @@
                 </div>
                 </button>
                 <!-- LOGO -->
-                <a href="index.html" class="text-4xl font-MorabbaBold tracking-wide">
+                <a href="index.html" class="text-4xl font-MorabbaBold tracking-wide text-zinc-900">
                     کارن استایل
                 </a>
                 <!-- ACTION BTN -->
-                <div class="flex items-center justify-center gap-x-3">
+                <div class="flex items-center justify-center gap-x-3 text-zinc-900">
                     <!-- SHOPPING CART -->
                     <button class="relative flex justify-center group z-30">
                         <svg class="size-6 action-btn">
@@ -213,7 +212,8 @@
                                 <svg class="size-24 text-zinc-300 dark:text-zinc-300">
                                     <use href="#shopping-cart" />
                                 </svg>
-                                <h class="font-DanaMedium text-lg pt-2 pb-3">هیچ محصولی در سبد خرید نیست! </h>
+                                <h class="font-DanaMedium text-lg pt-2 pb-3 text-zinc-100">هیچ محصولی در سبد خرید نیست!
+                                </h>
                                 <p class="text-zinc-400 text-sm">شاید این صفحات برای شما جذاب باشند :</p>
                                 <ul class="flex items-center  text-sm gap-x-2 text-sky-400">
                                     <li>
@@ -259,7 +259,8 @@
                 </div>
             </div>
             <!-- MENU -->
-            <ul class="relative flex items-center justify-center gap-x-6 w-full mx-auto pt-8 child:cursor-pointer">
+            <ul
+                class="relative flex items-center justify-center gap-x-6 w-full mx-auto pt-8 child:cursor-pointer text-zinc-900">
                 <li class="menu-item group">
                     <a href="#" class="menu-item-link">مـردانـه</a>
                     <svg class="menu-item-icon ">
@@ -542,7 +543,7 @@
                 <li class="hover:opacity-50 transition-opacity duration-300">
                     <a href="#">اکـسسوری</a>
                 </li>
-                <span class="w-1 h-8 flex border-l-2 border-zinc-200 dark:border-zinc-600"></span>
+                <span class="w-1 h-8 flex border-l-2 border-zinc-900/30"></span>
                 <li class="hover:opacity-50 transition-opacity duration-300">
                     <a href="#">حـراج اسـتایل</a>
                 </li>
@@ -1020,8 +1021,7 @@
         </nav>
 
         <!-- SLIDER -->
-        <!-- Swiper -->
-        <div class="swiper absolute top-16 lg:top-0 inset-x-0 h-[35vh] lg:h-[90vh] -z-10 header-slider">
+        <div class="swiper absolute top-16 lg:top-0 inset-x-0 h-[35vh] md:h-[60vh] lg:h-[90vh] -z-10 header-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="./images/slider/1.jpg" alt="slide">
@@ -1034,36 +1034,116 @@
                 </div>
             </div>
             <!--pagination  -->
-            <div class="absolute flex items-center justify-center flex-col right-10 lg:right-20 bottom-5">
+            <div
+                class="absolute w-full md:w-fit flex items-center justify-center flex-col lg:right-20 bottom-2 lg:bottom-5">
                 <div class="swiper-pagination mb-2 lg:mb-4"></div>
                 <!-- ACTION BTN -->
                 <div class="flex items-center gap-x-3 z-30 child:cursor-pointenr">
                     <button class="button-prev">
-                        <svg class="size-4 lg:size-6">
+                        <svg class="size-4 lg:size-6 text-zinc-800">
                             <use href="#arrow"></use>
                         </svg>
                     </button>
                     <button class="button-next">
-                        <svg class="size-4 lg:size-6 rotate-180">
+                        <svg class="size-4 lg:size-6 text-zinc-800 rotate-180">
                             <use href="#arrow"></use>
                         </svg>
                     </button>
                 </div>
             </div>
-
         </div>
     </header>
 
+    <main class="my-8 md:my-14">
+        <!-- CATEGORY -->
+        <section class="container">
+            <!-- SECTION TITLE -->
+            <div class="flex flex-col gap-y-3 sm:flex-row items-start md:items-center justify-between w-full">
+                <div class="space-y-1 md:space-y-2">
+                    <h3 class="text-xl md:text-2xl lg:text-3xl font-MorabbaMedium">دسـته بندی هـای محبوب</h3>
+                    <p class="text-sm md:text-lg text-zinc-500">جدیدترین و بروزترین دسته بندی های کارن استایل</p>
+                </div>
+                <a href="#" class="group text-sm md:text-base flex gap-x-1.5 items-center p-1 md:py-2 md:px-4 text-zinc-100 bg-zinc-900 dark:text-zinc-300 dark:bg-zinc-700 rounded ">
+                    <p>مشاهده همه</p>
+                    <svg class="size-4 md:size-5 rotate-180 md:group-hover:-translate-x-2 transition-transform duration-300">
+                        <use href="#arrow" />
+                    </svg>
+                </a>
+            </div>
+              <!-- ITEMS -->
+              <div
+              class="flex items-center justify-evenly xl:justify-between flex-wrap mt-10 child:mb-8 gap-x-8 child:flex child:items-center child:flex-col child-hover:-translate-y-5 child:duration-300 child:cursor-pointer child:gap-y-2.5 child:text-zinc-700 child:dark:text-zinc-400">
+              <a href="shop.html">
+                  <img src="./images/category/1.webp"
+                      class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover rounded-full" alt="category1" />
+                  <p class="font-DanaMedium text-sm lg:text-base line-clamp-1">
+                    هودی مردانه
+                  </p>
+              </a>
+              <a href="shop.html">
+                  <img src="./images/category/2.webp"
+                      class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover rounded-full" alt="category1" />
+                  <p class="font-DanaMedium text-sm lg:text-base line-clamp-1">
+                    بوت و نیم بوت مردانه
+                  </p>
+              </a>
+              <a href="shop.html">
+                  <img src="./images/category/3.webp"
+                      class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover rounded-full" alt="category1" />
+                  <p class="font-DanaMedium text-sm lg:text-base line-clamp-1">
+                    بارانی، کت و کاپشن
+                  </p>
+              </a>
+              <a href="shop.html">
+                  <img src="./images/category/4.webp"
+                      class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover rounded-full" alt="category1" />
+                  <p class="font-DanaMedium text-sm lg:text-base line-clamp-1">
+                    ساعت مردانه
+                  </p>
+              </a>
+              <a href="shop.html">
+                  <img src="./images/category/5.webp"
+                      class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover rounded-full" alt="category1" />
+                  <p class="font-DanaMedium text-sm lg:text-base line-clamp-1">
+                    عینک زنانه
+                  </p>
+              </a>
+              <a href="shop.html">
+                  <img src="./images/category/6.webp"
+                      class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover rounded-full" alt="category1" />
+                  <p class="font-DanaMedium text-sm lg:text-base line-clamp-1">
+                    کیف زنانه             
+                </p>
+              </a>
+              <a href="shop.html">
+                  <img src="./images/category/7.webp"
+                      class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover rounded-full" alt="category1" />
+                  <p class="font-DanaMedium text-sm lg:text-base line-clamp-1">
+                    کفش روزمره زنانه              
+                </p>
+              </a>
+              <a href="shop.html">
+                  <img src="./images/category/8.webp"
+                      class="w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] object-cover rounded-full" alt="category1" />
+                  <p class="font-DanaMedium text-sm lg:text-base line-clamp-1">
+                    شلوار مردانه           
+                </p>
+              </a>
+            
+          </div>
+        </section>
+    </main>
 
-    <!-- bottom-navbar -->
-    <a href="#"
-        class="absolute bottom-20 left-3 bg-white shadow-md w-9 h-9 rounded flex-center lg:hidden dark:bg-zinc-800 hover:dark:bg-zinc-600 transition duration-300">
+    <!-- GO TO TOP BTN -->
+     <a href="#"
+        class="fixed bottom-20 left-3 bg-white shadow-md w-9 h-9 rounded flex-center lg:hidden dark:bg-zinc-800 hover:dark:bg-zinc-600 transition duration-300">
         <svg class="size-5 rotate-180">
             <use href="#chevron" />
         </svg>
-    </a>
+    </a> 
 
-    <ul class="bottom-navbar ">
+    <!-- bottom-navbar -->
+     <ul class="bottom-navbar">
         <li>
             <svg class="size-5">
                 <use href="#home" />
@@ -1090,11 +1170,12 @@
         </li>
     </ul>
 
+    <!-- OVERLAY  -->
     <div class="overlay"></div>
 
     <script src="./scripts/swiper.js"></script>
     <script src="./scripts/slider.js"></script>
     <script src="./scripts/app.js"></script>
-</body>`
+</body>
 
 </html>

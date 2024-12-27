@@ -4,7 +4,7 @@ var swiper = new Swiper(".header-slider", {
         delay: 2500,
         disableOnInteraction: false,
     },
-    speed: 1500,
+    speed: 1000,
     loop: true,
     pagination: {
         el: ".swiper-pagination",

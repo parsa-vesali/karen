@@ -4,8 +4,8 @@ module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-      // => @media (min-width: 480px) { ... }
       'xs': '480px',
+      // => @media (min-width: 480px) { ... }
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -25,9 +25,10 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: '1rem',
+        xs : '1rem',
         sm: '1rem',
-        lg: '1rem',
-        xl: '1rem',
+        lg: '2rem',
+        xl: '3rem',
         '2xl': '6rem',
       },
     },
