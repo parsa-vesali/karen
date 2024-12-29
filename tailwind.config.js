@@ -28,7 +28,7 @@ module.exports = {
         xs : '1rem',
         sm: '1rem',
         lg: '2rem',
-        xl: '3rem',
+        xl: '4rem',
         '2xl': '6rem',
       },
     },
@@ -43,6 +43,12 @@ module.exports = {
       },
       size: {
         '18': '72px',
+      },
+      height : {
+        '103' : '410px'
+      },
+      width : {
+        '75' : '300px'
       },
       fontFamily: {
         "Dana": "Dana",

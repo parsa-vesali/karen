@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-Dana bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100;
+    @apply font-Dana bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 transition-all;
   }
 
   input,
@@ -95,7 +95,7 @@
   }
 
   .menu-item {
-    @apply flex items-center justify-center gap-x-0.5;
+    @apply flex items-center justify-center gap-x-1;
   }
 
   .menu-item-link {
@@ -168,7 +168,20 @@
   }
 
   .bottom-navbar {
-    @apply flex items-center justify-between gap-x-4 lg:hidden fixed w-full px-4 md:px-10 py-2 inset-x-0 bottom-0 bg-white text-zinc-600  dark:text-zinc-300 dark:bg-zinc-800 rounded-t
-    text-sm child:flex child:flex-col child:gap-y-1.5 child:items-center child:cursor-pointer child:action-btn border-t-2 border-zinc-100 dark:border-zinc-900;
+    @apply z-10 flex items-center justify-between gap-x-4 lg:hidden fixed w-full px-5 sm:px-8 md:px-10 py-2 inset-x-0 bottom-0 bg-white text-zinc-900  dark:text-zinc-300 dark:bg-zinc-800 rounded-t font-DanaMedium
+    text-xs child:flex child:flex-col child:gap-y-1.5 child:items-center child:cursor-pointer child:action-btn border-t-2 border-zinc-100 dark:border-zinc-900;
+  }
+
+  /* PRODUCT CARD */
+  .product-card {
+    @apply relative p-2 sm:p-3 overflow-hidden cursor-pointer bg-zinc-50 dark:bg-zinc-800;
+  }
+
+  .product-card-badge {
+    @apply absolute z-10 top-0 right-5 bg-zinc-900 dark:bg-zinc-700 rounded-b-xl flex-center text-zinc-200 p-1.5 font-DanaMedium text-xs sm:text-base;
+  }
+
+  .product-card-hover_box {
+    @apply absolute hidden md:flex px-4 font-DanaMedium items-center gap-x-2 text-zinc-900 dark:text-zinc-200 bottom-0 left-0 right-0 bg-zinc-100/90 dark:bg-zinc-900/90 h-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-300;
   }
 }
